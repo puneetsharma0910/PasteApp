@@ -29,7 +29,7 @@ export const pasteSlice = createSlice({
     }
     },
     resetAllPastes: (state, action) => {
-      state.pastes = [];
+      state.pastes = [];// puneet sharma
       localStorage.removeItem("pastes");
   
     },
