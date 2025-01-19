@@ -34,12 +34,15 @@ export const pasteSlice = createSlice({
   
     },
     removeFromPastes: (state, action) => {
-      const paste = action.payload();
-      const index = state.pastes.findIndex((item)=>item.id === paste._id);
+      const pasteId = action.payload;
+      console.log(pasteId);
+      const index = state.pastes.findIndex((item)=>item.id === pasteId._id);
       if(index >=0){
 
         state.pastes.splice(index,1)  
         localStorage.setItem("pastes",JSON.stringify(state.pastes));
+
+        toast.success("Paste deleted Successfully")
       }
     },
   },
