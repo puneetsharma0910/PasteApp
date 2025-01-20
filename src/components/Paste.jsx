@@ -35,12 +35,13 @@ const Paste = () => {
                 <div>{paste.title}</div>
                 <div>{paste.content}</div>
                 <div className="flex flex-row justify-evenly">
-                  <button>Edit</button>
                   <button>
-                    <NavLink to={`/pastes/${paste?._id}`}>
+                    <a href={`/?pasteId=${paste?._id}`}>Edit</a></button>
+                  <button>
+                    <a href={`/pastes/${paste?._id}`}>
                      View
 
-                      </NavLink>
+                      </a>
                       </button>
                   <button
                     onClick={() => {
